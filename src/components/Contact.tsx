@@ -1,0 +1,49 @@
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Button } from "@/components/ui/button";
+
+const Contact = () => {
+  return (
+    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-12 md:grid-cols-2">
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>
+            <p className="text-gray-500 dark:text-gray-400 max-w-md">
+              Have a question or want to work together? Fill out the form and we'll get back to you as soon as possible.
+            </p>
+          </div>
+          <Card className="shadow-lg">
+            <CardHeader>
+              <CardTitle>Contact Us</CardTitle>
+              <CardDescription>We'd love to hear from you.</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <form className="space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="name">Name</Label>
+                  <Input id="name" placeholder="Enter your name" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="email">Email</Label>
+                  <Input id="email" type="email" placeholder="Enter your email" />
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="message">Message</Label>
+                  <Textarea id="message" placeholder="Enter your message" className="min-h-[100px]" />
+                </div>
+                <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white">
+                  Send Message
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
