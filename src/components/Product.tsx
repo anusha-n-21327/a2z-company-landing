@@ -31,7 +31,7 @@ const Product = () => {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {products.map((product, index) => (
-            <Card key={index} className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/50 dark:bg-gray-950/50 backdrop-blur-sm">
+            <Card key={index} className="flex flex-col items-center text-center p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/50 dark:bg-gray-950/50 backdrop-blur-sm">
               {product.icon}
               <CardHeader>
                 <CardTitle>{product.title}</CardTitle>

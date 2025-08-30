@@ -38,7 +38,7 @@ const Pricing = () => {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {pricingTiers.map((tier) => (
-            <Card key={tier.name} className={`flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 ${tier.isPopular ? 'border-2 border-primary relative' : ''}`}>
+            <Card key={tier.name} className={`flex flex-col shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${tier.isPopular ? 'border-2 border-primary relative' : ''}`}>
               {tier.isPopular && <div className="absolute -top-4 right-4 bg-primary text-primary-foreground px-3 py-1 text-sm font-bold rounded-full">Most Popular</div>}
               <CardHeader className="text-center">
                 <CardTitle className="text-2xl">{tier.name}</CardTitle>

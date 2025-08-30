@@ -31,7 +31,7 @@ const About = () => {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {aboutItems.map((item, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <CardHeader className="flex flex-col items-center text-center">
                 {item.icon}
                 <CardTitle className="mt-4">{item.title}</CardTitle>
