@@ -9,7 +9,7 @@ const Footer = () => {
           <span className="font-bold text-lg">InnovateX</span>
         </div>
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          © {new Date().getFullYear()} InnovateX. All rights reserved.
+          © {new Date().getFullYear()} InnovateX. All rights reserved by Anusha.
         </p>
         <div className="flex gap-4 mt-4 md:mt-0">
           <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-primary dark:text-gray-400">LinkedIn</a>
