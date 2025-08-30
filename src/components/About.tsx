@@ -24,7 +24,7 @@ const About = () => {
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Why Choose InnovateX?</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Why Choose A2Z Company?</h2>
           <p className="mt-4 max-w-2xl mx-auto text-gray-500 md:text-xl dark:text-gray-400">
             We are dedicated to providing innovative solutions that drive progress and success.
           </p>
