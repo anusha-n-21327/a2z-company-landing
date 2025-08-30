@@ -19,7 +19,7 @@ const Header = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="transition-colors hover:text-primary"
+              className="relative text-gray-600 dark:text-gray-300 transition-colors hover:text-primary after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-2px] after:left-0 after:bg-primary after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left"
             >
               {item}
             </a>
