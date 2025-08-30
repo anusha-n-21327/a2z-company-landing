@@ -9,7 +9,7 @@ const Hero = () => {
             Innovating the Future, Today.
           </h1>
           <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 md:text-xl">
-            A2Z Company is at the forefront of technological advancement, creating solutions that shape tomorrow's world.
+            InnovateX is at the forefront of technological advancement, creating solutions that shape tomorrow's world.
           </p>
           <div className="mt-8">
             <Button size="lg" className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white font-bold shadow-lg transform hover:scale-105 transition-transform">
