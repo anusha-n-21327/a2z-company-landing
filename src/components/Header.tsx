@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
+import { LogoIcon } from "./LogoIcon";
 
 const Header = () => {
   const menuItems = ["Home", "About", "Product", "Researches", "Pricing", "Contact"];
@@ -11,6 +12,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-lg dark:bg-gray-950/80">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <a href="#" className="flex items-center gap-2">
+          <LogoIcon className="h-8 w-8" />
           <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500">
             A2Z Company
           </span>
@@ -36,6 +38,7 @@ const Header = () => {
           <SheetContent side="right">
             <div className="grid gap-4 p-4">
               <a href="#" className="flex items-center gap-2">
+                <LogoIcon className="h-8 w-8" />
                 <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500">
                   A2Z Company
                 </span>
