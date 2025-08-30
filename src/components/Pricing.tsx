@@ -54,7 +54,7 @@ const Pricing = () => {
                     </li>
                   ))}
                 </ul>
-                <Button className={`w-full ${tier.isPopular ? '' : 'bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white'}`}>
+                <Button className={`w-full ${tier.isPopular ? '' : 'bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 hover:from-purple-600 hover:via-blue-600 hover:to-pink-600 text-white'}`}>
                   Get Started
                 </Button>
               </CardContent>

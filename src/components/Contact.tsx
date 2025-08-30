@@ -34,7 +34,7 @@ const Contact = () => {
                   <Label htmlFor="message">Message</Label>
                   <Textarea id="message" placeholder="Enter your message" className="min-h-[100px]" />
                 </div>
-                <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white">
+                <Button type="submit" className="w-full bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500 hover:from-purple-600 hover:via-blue-600 hover:to-pink-600 text-white">
                   Send Message
                 </Button>
               </form>
