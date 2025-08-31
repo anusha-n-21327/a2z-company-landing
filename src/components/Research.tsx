@@ -4,15 +4,15 @@ const Research = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid gap-10 md:grid-cols-2 items-center">
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-100">Our Research & Client Collaborations</h2>
+            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-100">Our Researchers: A Collaboration-Driven Approach</h2>
             <p className="text-slate-400 md:text-lg">
-              At A2Z Company, our research goes beyond theories — it is rooted in real-world collaborations. We believe that innovation happens when technology meets people’s true needs.
+              At A2Z Company, our research is a unique partnership between our CEO, Anusha, and the clients we serve. We believe that true innovation comes not from isolated labs, but from real-world collaboration and understanding the challenges our clients face every day.
             </p>
             <p className="text-slate-400 md:text-lg">
-              Through meaningful conversations with our clients, we have studied their challenges, understood their vision, and worked together to create solutions that drive success. Our research is not limited to papers or labs; it is the continuous process of learning from every project, refining ideas, and delivering results that truly make a difference.
+              Anusha works directly with clients, treating them as co-researchers in the development process. Through these meaningful conversations, we study their challenges, understand their vision, and work together to create solutions that drive success. This continuous process of learning from every project allows us to refine ideas and deliver results that truly make a difference.
             </p>
             <p className="text-slate-400 md:text-lg">
-              Every client story is a reflection of our mission — to empower individuals and businesses with transformative solutions that help them achieve what they aspire to.
+              Every product we build is a reflection of this collaborative spirit. The stories of our clients are woven into the DNA of A2Z Company, a testament to our mission of empowering individuals and businesses with transformative solutions.
             </p>
           </div>
           <div className="flex justify-center">
