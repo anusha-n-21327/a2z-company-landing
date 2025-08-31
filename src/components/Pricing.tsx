@@ -74,7 +74,7 @@ const Pricing = () => {
                 </ul>
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <Button className={`w-full ${tier.isPopular ? 'bg-cyan-500 text-slate-900 hover:bg-cyan-400' : 'bg-slate-800 border border-cyan-500 hover:bg-cyan-500 hover:text-slate-900'}`}>
+                    <Button className={`w-full ${tier.isPopular ? 'bg-cyan-500 text-white hover:bg-cyan-400' : 'bg-slate-800 text-white border border-cyan-500 hover:bg-cyan-500 hover:text-white'}`}>
                       Buy Now
                     </Button>
                   </AlertDialogTrigger>
