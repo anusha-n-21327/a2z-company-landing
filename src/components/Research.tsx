@@ -1,27 +1,44 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { User, Users } from "lucide-react";
+
+const teamMembers = [
+  {
+    icon: <User className="h-10 w-10 text-cyan-400 mb-4" />,
+    name: "Anusha",
+    role: "CEO & Founder",
+    description: "Anusha believes research is not just theory but learning through real-world collaborations. By working closely with clients, she studies their challenges, designs innovative solutions, and transforms their vision into reality.",
+  },
+  {
+    icon: <Users className="h-10 w-10 text-cyan-400 mb-4" />,
+    name: "A2Z Research Team",
+    role: "Innovators & Collaborators",
+    description: "A passionate group of thinkers and developers dedicated to exploring new technologies, refining ideas, and building impactful solutions that empower businesses and communities.",
+  },
+];
+
 const Research = () => {
   return (
     <section id="researches" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-16 md:grid-cols-2 items-center">
-          <div className="space-y-6">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-100">A Collaboration-Driven Approach</h2>
-            <p className="text-slate-400 md:text-lg">
-              At A2Z Company, our research is a unique partnership between our CEO, Anusha, and the clients we serve. We believe that true innovation comes not from isolated labs, but from real-world collaboration and understanding the challenges our clients face every day.
-            </p>
-            <p className="text-slate-400 md:text-lg">
-              Anusha works directly with clients, treating them as co-researchers in the development process. Through these meaningful conversations, we study their challenges, understand their vision, and work together to create solutions that drive success. This continuous process of learning from every project allows us to refine ideas and deliver results that truly make a difference.
-            </p>
-            <p className="text-slate-400 md:text-lg">
-              Every product we build is a reflection of this collaborative spirit. The stories of our clients are woven into the DNA of A2Z Company, a testament to our mission of empowering individuals and businesses with transformative solutions.
-            </p>
-          </div>
-          <div className="flex justify-center">
-            <img
-              src="https://images.pexels.com/photos/8728381/pexels-photo-8728381.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-              alt="Team collaborating on a futuristic interface"
-              className="rounded-lg w-full h-auto max-w-md object-cover border-2 border-cyan-500/50 [box-shadow:0_0_20px_theme(colors.cyan.400)]"
-            />
-          </div>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl text-slate-100">Our Research & Collaborations</h2>
+          <p className="mt-4 max-w-3xl mx-auto text-slate-400 md:text-xl">
+            Exploring ideas and building real-world solutions through client-focused innovation.
+          </p>
+        </div>
+        <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+          {teamMembers.map((member, index) => (
+            <Card key={index} className="flex flex-col items-center text-center p-6 bg-slate-900/50 border border-cyan-500/30 hover:border-cyan-500 transition-all duration-300 hover:-translate-y-1 hover:[box-shadow:0_0_15px_theme(colors.cyan.500)]">
+              {member.icon}
+              <CardHeader>
+                <CardTitle className="text-slate-100 text-2xl">{member.name}</CardTitle>
+                <p className="text-cyan-400 font-medium">{member.role}</p>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-400">{member.description}</p>
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </div>
     </section>
