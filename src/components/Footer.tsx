@@ -11,7 +11,7 @@ const Footer = () => {
           </span>
         </div>
         <p className="text-sm text-slate-500">
-          © {new Date().getFullYear()} A2Z Company. All rights reserved.
+          All Rights Reserved By A2Z Company
         </p>
       </div>
     </footer>
