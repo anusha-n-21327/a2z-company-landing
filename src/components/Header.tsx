@@ -13,11 +13,11 @@ const Header = () => {
   const activeId = useScrollSpy(sectionIds, { rootMargin: "0px 0px -80% 0px" });
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-purple-800 text-white shadow-md">
+    <header className="sticky top-0 z-50 w-full bg-slate-950/70 backdrop-blur-sm border-b border-cyan-500/20">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <a href="#" className="flex items-center gap-2">
           <A2ZLogo className="h-8 w-auto" />
-          <span className="font-bold text-xl text-white">
+          <span className="font-bold text-xl text-slate-100">
             A2Z Company
           </span>
         </a>
@@ -30,8 +30,8 @@ const Header = () => {
                 key={item}
                 href={`#${id}`}
                 className={cn(
-                  "relative text-purple-200 transition-colors hover:text-white after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-[-2px] after:left-0 after:bg-white after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left",
-                  isActive && "text-white after:scale-x-100 after:origin-bottom-left"
+                  "transition-colors hover:text-cyan-400",
+                  isActive ? "text-cyan-400 [text-shadow:0_0_8px_theme(colors.cyan.400)]" : "text-slate-300"
                 )}
               >
                 {item}
@@ -41,16 +41,16 @@ const Header = () => {
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden bg-transparent text-white hover:bg-purple-700 hover:text-white">
+            <Button variant="outline" size="icon" className="md:hidden bg-transparent border-cyan-500/50 text-cyan-400 hover:bg-cyan-900/50 hover:text-cyan-300">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent side="right" className="bg-slate-950 border-l-cyan-500/20">
             <div className="grid gap-4 p-4">
               <a href="#" className="flex items-center gap-2">
                 <A2ZLogo className="h-8 w-auto" />
-                <span className="font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-blue-500 to-pink-500">
+                <span className="font-bold text-xl text-slate-100">
                   A2Z Company
                 </span>
               </a>
@@ -63,8 +63,8 @@ const Header = () => {
                       key={item}
                       href={`#${id}`}
                       className={cn(
-                        "rounded-md px-3 py-2 transition-colors hover:bg-muted hover:text-primary",
-                        isActive && "bg-muted text-primary"
+                        "rounded-md px-3 py-2 transition-colors hover:bg-slate-800 hover:text-cyan-400",
+                        isActive ? "bg-slate-800 text-cyan-400" : "text-slate-300"
                       )}
                     >
                       {item}
