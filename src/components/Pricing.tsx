@@ -80,8 +80,8 @@ const Pricing = () => {
                   </AlertDialogTrigger>
                   <AlertDialogContent className="bg-slate-900 border-cyan-500">
                     <AlertDialogHeader>
-                      <AlertDialogTitle>Confirm Your Purchase</AlertDialogTitle>
-                      <AlertDialogDescription>
+                      <AlertDialogTitle className="text-slate-100">Confirm Your Purchase</AlertDialogTitle>
+                      <AlertDialogDescription className="text-slate-400">
                         You are about to purchase the {tier.name} plan for {tier.price}/mo. Do you want to proceed with the payment?
                       </AlertDialogDescription>
                     </AlertDialogHeader>
