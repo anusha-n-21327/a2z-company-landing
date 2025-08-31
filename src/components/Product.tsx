@@ -1,21 +1,31 @@
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Code, Bot, ShieldCheck } from "lucide-react";
+import { LayoutTemplate, Smartphone, Megaphone, Cloud, Bot } from "lucide-react";
 
 const products = [
   {
-    icon: <Code className="h-10 w-10 text-fuchsia-400 mb-4" />,
-    title: "Quantum Core",
-    description: "A revolutionary development platform for building next-gen applications with unprecedented speed and efficiency.",
+    icon: <LayoutTemplate className="h-10 w-10 text-fuchsia-400 mb-4" />,
+    title: "Website Development Kit",
+    description: "A complete solution to design and launch responsive startup websites.",
+  },
+  {
+    icon: <Smartphone className="h-10 w-10 text-fuchsia-400 mb-4" />,
+    title: "Mobile App Starter Pack",
+    description: "Tools and templates for building Android and iOS apps quickly.",
+  },
+  {
+    icon: <Megaphone className="h-10 w-10 text-fuchsia-400 mb-4" />,
+    title: "Digital Marketing Toolkit",
+    description: "Branding, social media setup, and marketing strategies for growth.",
+  },
+  {
+    icon: <Cloud className="h-10 w-10 text-fuchsia-400 mb-4" />,
+    title: "Cloud Hosting & Deployment",
+    description: "Scalable and secure hosting solutions for startups.",
   },
   {
     icon: <Bot className="h-10 w-10 text-fuchsia-400 mb-4" />,
-    title: "Synapse AI",
-    description: "An advanced AI assistant that automates complex tasks, providing intelligent insights and boosting productivity.",
-  },
-  {
-    icon: <ShieldCheck className="h-10 w-10 text-fuchsia-400 mb-4" />,
-    title: "Aegis Security",
-    description: "A comprehensive security suite that protects your digital assets with proactive threat detection and response.",
+    title: "AI-Powered Business Assistant",
+    description: "Smart automation for customer support and business operations.",
   },
 ];
 

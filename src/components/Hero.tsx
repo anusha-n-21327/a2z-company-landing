@@ -12,7 +12,7 @@ const Hero = () => {
             A2Z Company is at the forefront of technological advancement, creating solutions that shape tomorrow's world.
           </p>
           <div className="mt-8">
-            <a href="#product">
+            <a href="#contact">
               <Button size="lg" className="bg-cyan-500 text-slate-900 font-bold shadow-lg transform transition-all hover:scale-105 hover:bg-cyan-400 [box-shadow:0_0_15px_theme(colors.cyan.500)] hover:[box-shadow:0_0_25px_theme(colors.cyan.400)]">
                 Get Started
               </Button>
