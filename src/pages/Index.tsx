@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">
-      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-purple-50 via-blue-50 to-white dark:from-purple-900/20 dark:via-blue-900/20 dark:to-gray-950 -z-10" />
+      <div className="fixed inset-0 w-full h-full bg-gradient-to-br from-purple-100 via-blue-100 to-white dark:from-purple-900/30 dark:via-blue-900/30 dark:to-gray-950 -z-10" />
       <Header />
       <main className="flex-grow">
         <Hero />

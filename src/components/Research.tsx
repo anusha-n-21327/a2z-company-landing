@@ -21,7 +21,7 @@ const researchItems = [
 
 const Research = () => {
   return (
-    <section id="researches" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
+    <section id="researches" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Research Work of CEO & Founder – Anusha</h2>
@@ -31,7 +31,7 @@ const Research = () => {
         </div>
         <div className="grid gap-8 md:grid-cols-3">
           {researchItems.map((item, index) => (
-            <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 bg-white/50 dark:bg-gray-950/50 backdrop-blur-sm">
               <CardHeader className="flex flex-col items-center text-center">
                 {item.icon}
                 <CardTitle className="mt-4">{item.title}</CardTitle>

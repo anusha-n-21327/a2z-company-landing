@@ -2,7 +2,7 @@ import { A2ZLogo } from "./A2ZLogo";
 
 const Footer = () => {
   return (
-    <footer className="w-full py-8 bg-gray-100 dark:bg-gray-800">
+    <footer className="w-full py-8 bg-white/30 dark:bg-gray-950/30 backdrop-blur-sm">
       <div className="container mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center justify-between">
         <div className="flex items-center gap-2 mb-4 md:mb-0">
           <A2ZLogo className="h-6 w-auto" />
