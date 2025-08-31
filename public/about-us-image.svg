@@ -1,12 +1,43 @@
 <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="512" height="512" rx="20" fill="#1e293b"/>
-<defs>
-<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-  <stop offset="0%" style="stop-color:#00ffff;stop-opacity:1" />
-  <stop offset="100%" style="stop-color:#ff00ff;stop-opacity:1" />
-</linearGradient>
-</defs>
-<path d="M128 384L224 256L128 128" stroke="url(#grad1)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M256 384L352 256L256 128" stroke="url(#grad1)" stroke-width="16" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M384 384L480 256L384 128" stroke="url(#grad1)" stroke-width="16" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect width="512" height="512" rx="20" fill="#1e293b"/>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00ffff;" />
+      <stop offset="100%" style="stop-color:#ff00ff;" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Connections -->
+  <g opacity="0.7">
+    <line x1="256" y1="256" x2="150" y2="150" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="256" y1="256" x2="362" y2="150" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="256" y1="256" x2="150" y2="362" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="256" y1="256" x2="362" y2="362" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="256" y1="256" x2="256" y2="128" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="256" y1="256" x2="256" y2="384" stroke="url(#grad1)" stroke-width="3"/>
+    <line x1="150" y1="150" x2="256" y2="128" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+    <line x1="362" y1="150" x2="256" y2="128" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+    <line x1="150" y1="362" x2="256" y2="384" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+    <line x1="362" y1="362" x2="256" y2="384" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+    <line x1="150" y1="150" x2="150" y2="362" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+    <line x1="362" y1="150" x2="362" y2="362" stroke="url(#grad1)" stroke-width="2" opacity="0.5"/>
+  </g>
+
+  <!-- Nodes -->
+  <g filter="url(#glow)">
+    <circle cx="256" cy="256" r="30" fill="url(#grad1)"/>
+    <circle cx="150" cy="150" r="20" fill="url(#grad1)"/>
+    <circle cx="362" cy="150" r="20" fill="url(#grad1)"/>
+    <circle cx="150" cy="362" r="20" fill="url(#grad1)"/>
+    <circle cx="362" cy="362" r="20" fill="url(#grad1)"/>
+    <circle cx="256" cy="128" r="15" fill="url(#grad1)"/>
+    <circle cx="256" cy="384" r="15" fill="url(#grad1)"/>
+  </g>
 </svg>
