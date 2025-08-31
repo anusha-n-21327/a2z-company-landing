@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
@@ -42,7 +42,17 @@ const pricingTiers = [
 ];
 
 const Pricing = () => {
-  const [purchasedPlans, setPurchasedPlans] = useState<string[]>([]);
+  const [purchasedPlans, setPurchasedPlans] = useState<string[]>(() => {
+    if (typeof window !== 'undefined') {
+      const savedPlans = localStorage.getItem('purchasedPlans');
+      return savedPlans ? JSON.parse(savedPlans) : [];
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem('purchasedPlans', JSON.stringify(purchasedPlans));
+  }, [purchasedPlans]);
 
   const handlePayment = (planName: string) => {
     showSuccess("Payment Successful – Thank you for your purchase!");
