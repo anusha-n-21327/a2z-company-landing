@@ -108,7 +108,7 @@ const Pricing = () => {
                         </AlertDialogHeader>
                         <AlertDialogFooter>
                           <AlertDialogCancel>Cancel</AlertDialogCancel>
-                          <AlertDialogAction onClick={() => handlePayment(tier.name)}>Confirm Payment</AlertDialogAction>
+                          <AlertDialogAction onClick={() => handlePayment(tier.name)}>Proceed to Pay</AlertDialogAction>
                         </AlertDialogFooter>
                       </AlertDialogContent>
                     </AlertDialog>
