@@ -1,14 +1,22 @@
-"use client";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileText, Lightbulb, FlaskConical } from "lucide-react";
 
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-
-const data = [
-  { name: '2020', innovationIndex: 4000 },
-  { name: '2021', innovationIndex: 4500 },
-  { name: '2022', innovationIndex: 5200 },
-  { name: '2023', innovationIndex: 6100 },
-  { name: '2024', innovationIndex: 7500 },
+const researchItems = [
+  {
+    icon: <FileText className="h-8 w-8 text-primary" />,
+    title: "AI-Driven Predictive Analytics",
+    description: "Published a groundbreaking paper on using machine learning models to predict market trends with over 95% accuracy, now a core component of Synapse AI.",
+  },
+  {
+    icon: <Lightbulb className="h-8 w-8 text-primary" />,
+    title: "Quantum-Resistant Encryption",
+    description: "Led the development of a novel encryption algorithm for Aegis Security, ensuring data protection against emerging threats from quantum computing.",
+  },
+  {
+    icon: <FlaskConical className="h-8 w-8 text-primary" />,
+    title: "Decentralized Application Frameworks",
+    description: "Pioneered research into scalable and efficient frameworks for decentralized applications, which became the foundation for the Quantum Core platform.",
+  },
 ];
 
 const Research = () => {
@@ -16,43 +24,24 @@ const Research = () => {
     <section id="researches" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Pioneering Research</h2>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Research Work of CEO & Founder – Anusha</h2>
           <p className="mt-4 max-w-2xl mx-auto text-gray-500 md:text-xl dark:text-gray-400">
-            Our commitment to research and development drives our innovation forward.
+            Anusha's innovative research contributions have been instrumental in shaping the technological landscape and driving A2Z Company's success.
           </p>
         </div>
-        <Card className="shadow-lg">
-          <CardHeader>
-            <CardTitle>Innovation Growth Index</CardTitle>
-            <CardDescription>Tracking our progress in key technological areas over the years.</CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="w-full h-80">
-              <ResponsiveContainer>
-                <LineChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip
-                    contentStyle={{
-                      backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                      backdropFilter: 'blur(5px)',
-                      border: '1px solid rgba(0, 0, 0, 0.1)',
-                      borderRadius: '0.5rem',
-                    }}
-                  />
-                  <Line type="monotone" dataKey="innovationIndex" stroke="url(#colorUv)" strokeWidth={3} />
-                  <defs>
-                    <linearGradient id="colorUv" x1="0" y1="0" x2="1" y2="0">
-                      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.8}/>
-                      <stop offset="95%" stopColor="#82ca9d" stopOpacity={0.8}/>
-                    </linearGradient>
-                  </defs>
-                </LineChart>
-              </ResponsiveContainer>
-            </div>
-          </CardContent>
-        </Card>
+        <div className="grid gap-8 md:grid-cols-3">
+          {researchItems.map((item, index) => (
+            <Card key={index} className="shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+              <CardHeader className="flex flex-col items-center text-center">
+                {item.icon}
+                <CardTitle className="mt-4">{item.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center">
+                <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
       </div>
     </section>
   );

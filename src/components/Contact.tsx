@@ -3,19 +3,34 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Contact = () => {
   return (
     <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid gap-12 md:grid-cols-2">
-          <div className="space-y-4">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>
-            <p className="text-gray-500 dark:text-gray-400 max-w-md">
-              Have a question or want to work together? Fill out the form and we'll get back to you as soon as possible.
-            </p>
+        <div className="max-w-2xl mx-auto text-center">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Get in Touch</h2>
+          <p className="text-gray-500 dark:text-gray-400 mt-4">
+            Have a question or want to work together? Fill out the form and we'll get back to you as soon as possible.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 my-8">
+            <div className="flex items-center justify-center gap-2">
+              <Mail className="h-5 w-5 text-primary" />
+              <span>contact@a2zcompany.com</span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <Phone className="h-5 w-5 text-primary" />
+              <span>+91 12345 67890</span>
+            </div>
+            <div className="flex items-center justify-center gap-2">
+              <MapPin className="h-5 w-5 text-primary" />
+              <span>Bangalore, India</span>
+            </div>
           </div>
-          <Card className="shadow-lg">
+
+          <Card className="shadow-lg text-left">
             <CardHeader>
               <CardTitle>Contact Us</CardTitle>
               <CardDescription>We'd love to hear from you.</CardDescription>
